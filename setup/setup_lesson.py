@@ -4,6 +4,8 @@ from IPython.display import HTML, Javascript, IFrame, clear_output
 
 lesson1cells = [8, 14, 19, 31] 
 lesson2cells = [11, 23, 35, 41] 
+lesson3cells = [9, 16, 18, 26, 28] 
+lesson4cells = [21] 
 
 def add_run_button(): 
     # set up run button for every cell
@@ -38,6 +40,16 @@ def setup_Lesson2():
     add_run_button()
     run_cells( lesson2cells )
     
+def setup_Lesson3(): 
+    clear_output()
+    add_run_button()
+    run_cells( lesson3cells )
+
+def setup_Lesson4(): 
+    clear_output()
+    add_run_button()
+    run_cells( lesson4cells )
+
 """
 def setup_blockly():
     # Ref : https://github.com/jupyter/notebook/issues/2660#issuecomment-354994932
