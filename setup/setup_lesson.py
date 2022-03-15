@@ -6,6 +6,7 @@ lesson1cells = [8, 14, 19, 31]
 lesson2cells = [11, 23, 35, 41] 
 lesson3cells = [9, 16, 18, 26, 28] 
 lesson4cells = [21] 
+lesson5cells = [17] 
 
 def add_run_button(): 
     # set up run button for every cell
@@ -49,6 +50,11 @@ def setup_Lesson4():
     clear_output()
     add_run_button()
     run_cells( lesson4cells )
+
+def setup_Lesson5(): 
+    clear_output()
+    add_run_button()
+    run_cells( lesson5cells )
 
 """
 def setup_blockly():
