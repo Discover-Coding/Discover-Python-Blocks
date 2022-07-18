@@ -2,39 +2,29 @@ import json
 import re
 from IPython.display import HTML, Javascript, IFrame, clear_output
 
+# Run these cells at the start of the lesson (i.e. to set up blockly)
 lesson1cells = [8, 14, 19, 31] 
 lesson2cells = [11, 23, 35, 41] 
 lesson3cells = [9, 16, 18, 26, 28] 
 lesson4cells = [21] 
 lesson5cells = [17] 
 lesson8cells = [3,7] 
+lesson9cells = [3,7] 
+lesson10cells = [3,7] 
 
 def add_run_button(): 
     # set up run button for every cell
     display(HTML("<style>div.run_this_cell{display:block;}table {margin-left: 0 !important;}</style>"))
     
-def run_blockly_Lesson1():
-    display(Javascript('Jupyter.notebook.execute_cell_range(9,11)'))
-    display(Javascript('Jupyter.notebook.execute_cell_range(14,16)'))
-    display(Javascript('Jupyter.notebook.execute_cell_range(19,21)'))
-    display(Javascript('Jupyter.notebook.execute_cell_range(26,28)'))
-    display(Javascript('Jupyter.notebook.execute_cell_range(33,35)'))
-
 def run_cells(cells):
     for i in cells:
         js = 'Jupyter.notebook.execute_cell_range(' + str(i) + ',' + str(i+1) + ')'
         display(Javascript(js))
 
 def setup_Lesson1(): 
-    """ 
-    Sets up: 
-        run button
-        blockly code blocks
-    """ 
     clear_output()
     add_run_button()
     run_cells( lesson1cells )
-    #run_blockly_Lesson1()
     
     
 def setup_Lesson2(): 
@@ -61,6 +51,16 @@ def setup_Lesson8():
     clear_output()
     add_run_button()
     run_cells( lesson8cells )
+
+def setup_Lesson9(): 
+    clear_output()
+    add_run_button()
+    run_cells( lesson9cells )
+
+def setup_Lesson10(): 
+    clear_output()
+    add_run_button()
+    run_cells( lesson10cells )
 
 """
 def setup_blockly():
