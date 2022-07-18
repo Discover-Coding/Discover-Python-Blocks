@@ -5,12 +5,14 @@ from IPython.display import HTML, Javascript, IFrame, clear_output
 # Run these cells at the start of the lesson (i.e. to set up blockly)
 lesson1cells = [8, 14, 19, 31] 
 lesson2cells = [11, 23, 35, 41] 
-lesson3cells = [9, 16, 18, 26, 28] 
-lesson4cells = [21] 
-lesson5cells = [17] 
-lesson8cells = [3,7] 
+lesson3cells = [10, 17, 19]
+lesson4cells = [9, 11] 
+lesson5cells = [12] 
+lesson6cells = [13] 
+lesson7cells = [] 
+lesson8cells = [] 
 lesson9cells = [3,7] 
-lesson10cells = [3,7] 
+lesson10cells = [44] 
 
 def add_run_button(): 
     # set up run button for every cell
