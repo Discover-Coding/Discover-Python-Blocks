@@ -338,6 +338,26 @@
       <category name="Functions" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"></category>
     </xml>
 
+    <xml xmlns="https://developers.google.com/blockly/xml" id="startBlocks" style="display: none">
+
+    <variables>
+      <variable type="" id="">aNumber</variable>
+    </variables>
+
+    <block type="variables_set" x="50" y="50">
+    <field name="VAR" variabletype="text">aNumber</field>
+    <value name="VALUE">
+      <block type="math_number">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+
+    <next>
+      <block type="controls_whileUntil">
+      </block>
+    </block>
+  </xml>
+
   <table style="width:100%">
     <tr>
       <th style="width:50%">Blockly Output</th><th style="width:50%">Python Code</th>
