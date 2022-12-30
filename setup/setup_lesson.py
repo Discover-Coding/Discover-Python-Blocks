@@ -49,6 +49,11 @@ def setup_Lesson5():
     add_run_button()
     run_cells( lesson5cells )
 
+def setup_Lesson6(): 
+    clear_output()
+    add_run_button()
+    run_cells( lesson6cells )
+
 def setup_Lesson8(): 
     clear_output()
     add_run_button()
