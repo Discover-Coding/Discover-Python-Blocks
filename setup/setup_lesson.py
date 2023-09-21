@@ -1,14 +1,15 @@
 import json
 import re
 from IPython.display import HTML, Javascript, IFrame, clear_output
-
+import ipywidgets as widgets
+from functools import partial
 # Run these cells at the start of the lesson (i.e. to set up blockly)
 lesson1cells = [8, 14, 19, 31] 
 lesson2cells = [11, 23, 35, 41] 
 lesson3cells = [10, 17, 19]
 lesson4cells = [9, 11] 
 lesson5cells = [12] 
-lesson6cells = [13] 
+lesson6cells = [13,38] 
 lesson7cells = [] 
 lesson8cells = [] 
 lesson9cells = [3,7] 
@@ -22,6 +23,30 @@ def run_cells(cells):
     for i in cells:
         js = 'Jupyter.notebook.execute_cell_range(' + str(i) + ',' + str(i+1) + ')'
         display(Javascript(js))
+        
+def add_hint_button():
+    def clicked(isClicked):
+        if(hint_button.style.button_color == 'lightgreen'):
+            print('''
+        # SOLUTION
+
+        N = 1
+        M = 1 
+        sum = N + M
+
+
+        while sum < 200 :
+            print ( sum )
+            N = M
+            M = sum
+            sum = N + M   
+            ''')
+            hint_button.style.button_color = 'gray'
+
+    hint_button = widgets.Button(description = 'Hint')
+    hint_button.style.button_color = 'lightgreen'
+    hint_button.on_click(clicked)
+    display(hint_button)
 
 def setup_Lesson1(): 
     clear_output()
@@ -68,6 +93,7 @@ def setup_Lesson10():
     clear_output()
     add_run_button()
     run_cells( lesson10cells )
+    
 
 """
 def setup_blockly():
